@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="{{canonical}}">
+{{robots}}
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="{{brand}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{canonical}}">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+{{> fonts}}
+<link rel="stylesheet" href="css/style.css">
+{{schema}}
+</head>
+<body>
+<a class="skip-link" href="#tresc">Przejdź do treści</a>
+{{> header}}
+<main id="tresc">
+{{content}}
+</main>
+{{> footer}}
+{{mobile_bar}}
+{{lightbox}}
+<script src="js/main.js" defer></script>
+</body>
+</html>

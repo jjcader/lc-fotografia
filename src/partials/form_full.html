@@ -1,0 +1,74 @@
+<form class="form" id="formularz" method="post" data-form data-endpoint="{{form_endpoint}}" data-reply-time="{{reply_time}}">
+  <div class="form__row">
+    <div class="field">
+      <label for="f-imie">Imię i nazwisko <span class="req" aria-hidden="true">*</span></label>
+      <input id="f-imie" name="imie_nazwisko" type="text" autocomplete="name" required>
+    </div>
+    <div class="field">
+      <label for="f-firma">Firma <span class="opt">(opcjonalnie)</span></label>
+      <input id="f-firma" name="firma" type="text" autocomplete="organization">
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="field">
+      <label for="f-email">E-mail <span class="req" aria-hidden="true">*</span></label>
+      <input id="f-email" name="email" type="email" autocomplete="email" required>
+    </div>
+    <div class="field">
+      <label for="f-tel">Telefon <span class="opt">(opcjonalnie)</span></label>
+      <input id="f-tel" name="telefon" type="tel" autocomplete="tel">
+    </div>
+  </div>
+  <div class="form__row">
+    <div class="field">
+      <label for="f-rodzaj">Rodzaj sesji</label>
+      <select id="f-rodzaj" name="rodzaj_sesji">
+        <option>Portret biznesowy</option>
+        <option>Sesja wizerunkowa</option>
+        <option>Zdjęcia zespołu</option>
+        <option>Kadra zarządzająca</option>
+        <option>Zdjęcia w miejscu pracy</option>
+        <option>Inne / jeszcze nie wiem</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="f-osoby">Ile osób do sfotografowania?</label>
+      <select id="f-osoby" name="liczba_osob">
+        <option>1</option>
+        <option>2–5</option>
+        <option>6–20</option>
+        <option>21–50</option>
+        <option>Ponad 50</option>
+      </select>
+    </div>
+  </div>
+  <fieldset class="field fieldset">
+    <legend>Miejsce sesji</legend>
+    <div class="choices">
+      <label class="choice" for="f-m-studio"><input id="f-m-studio" type="radio" name="miejsce" value="studio" checked> W studiu</label>
+      <label class="choice" for="f-m-biuro"><input id="f-m-biuro" type="radio" name="miejsce" value="biuro"> W naszym biurze</label>
+      <label class="choice" for="f-m-inne"><input id="f-m-inne" type="radio" name="miejsce" value="do ustalenia"> Do ustalenia</label>
+    </div>
+  </fieldset>
+  <div class="field">
+    <label for="f-termin">Preferowany termin</label>
+    <input id="f-termin" name="termin" type="text" placeholder="np. druga połowa stycznia, rano">
+  </div>
+  <div class="field">
+    <label for="f-wiad">Wiadomość</label>
+    <textarea id="f-wiad" name="wiadomosc" rows="5" placeholder="Do czego potrzebne są zdjęcia? Strona www, LinkedIn, raport roczny, prasa…"></textarea>
+  </div>
+  <div class="hp" aria-hidden="true">
+    <label for="f-www">Zostaw to pole puste</label>
+    <input id="f-www" name="website" type="text" tabindex="-1" autocomplete="off">
+  </div>
+  <div class="check">
+    <input id="f-zgoda" name="zgoda" type="checkbox" value="tak" required>
+    <label for="f-zgoda">Akceptuję <a href="polityka-prywatnosci.html">politykę prywatności</a>. Dane z formularza posłużą wyłącznie do odpowiedzi na zapytanie. <span class="req" aria-hidden="true">*</span></label>
+  </div>
+  <div class="form__foot">
+    <button class="btn" type="submit">Wyślij zapytanie</button>
+    <p class="form__note">Pola oznaczone * są wymagane.</p>
+  </div>
+  <p class="form__status" role="status" aria-live="polite" data-form-status></p>
+</form>

@@ -1,0 +1,4 @@
+# Używane tylko, jeśli podłączysz repozytorium GitHub do Netlify (zamiast GitHub Pages).
+[build]
+  command = "python3 build.py"
+  publish = "dist"

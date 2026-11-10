@@ -1,0 +1,74 @@
+<!--
+{
+  "title": "O mnie · {{photographer}}, fotograf biznesowy {{city_in}} | {{brand}}",
+  "description": "{{photographer}}: fotograf portretów biznesowych i wizerunkowych. Jak pracuję, gdzie jest studio i dla kogo fotografuję.",
+  "nav": "omnie"
+}
+-->
+<section class="page-head">
+  <div class="wrap split">
+    <div class="split__text">
+      <p class="eyebrow">O mnie</p>
+      <h1 class="h1">{{photographer}}</h1>
+      <p class="lead">[Jedno zdanie: kim jest i dla kogo fotografuje, np. „Od [X] lat fotografuję ludzi biznesu: zarządy, zespoły i osoby, które budują własną markę.”]</p>
+      <p>[2–3 zdania o drodze zawodowej: jak zaczął, z jakimi firmami i branżami pracował, publikacje lub wyróżnienia.]</p>
+      <p>[1–2 zdania o tym, co lubi w portrecie i dlaczego klienci do niego wracają.]</p>
+      <ul class="stats" aria-label="W liczbach">
+        <li><strong>[X] lat</strong><span>doświadczenia</span></li>
+        <li><strong>[X]+</strong><span>firm-klientów</span></li>
+        <li><strong>[X]+</strong><span>sfotografowanych osób</span></li>
+      </ul>
+    </div>
+    <div class="split__media split__media--portrait">
+      <img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="[Imię Nazwisko], fotograf" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<section class="section section--line" aria-labelledby="h-jak-pracuje">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="h2" id="h-jak-pracuje">Jak pracuję</h2>
+    </div>
+    <ul class="principles">
+      <li class="principle">
+        <h3 class="h3">Swobodnie przed obiektywem</h3>
+        <p>Większość osób nie lubi być fotografowana. Podpowiadam pozy, pokazuję zdjęcia na bieżąco i pracuję, dopóki oboje nie jesteśmy zadowoleni.</p>
+      </li>
+      <li class="principle">
+        <h3 class="h3">Spójnie dla całej firmy</h3>
+        <p>Zespół fotografuję przy tym samym świetle i tle. Nowe osoby dofotografuję później w identycznym stylu.</p>
+      </li>
+      <li class="principle">
+        <h3 class="h3">Naturalny retusz</h3>
+        <p>Poprawiam światło, kolory i drobne niedoskonałości. Na zdjęciu masz wyglądać jak Ty, tylko w dobry dzień.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--tint" aria-labelledby="h-studio">
+  <div class="wrap split split--media-left">
+    <div class="split__media split__media--wide">
+      <img src="img/placeholders/portret-3x2.svg" width="600" height="400" alt="[Wnętrze studia]" loading="lazy">
+    </div>
+    <div class="split__text">
+      <p class="eyebrow">Studio</p>
+      <h2 class="h2" id="h-studio">{{address_street}}, {{address_city}}</h2>
+      <p>[Opis studia: jak duże jest, czy jest parking, czy zmieści się kilka osób naraz, czy jest miejsce do przebrania się.]</p>
+      <a class="link-arrow" href="{{maps_url}}" rel="noopener" target="_blank">Pokaż na mapie {{> arrow}}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-klienci">
+  <div class="wrap logos--grid">
+    <div class="section-head">
+      <h2 class="h2" id="h-klienci">Zaufali mi</h2>
+      <p class="section-head__aside">[Krótko: z jakimi branżami pracujesz, np. kancelarie, firmy technologiczne, banki, uczelnie.]</p>
+    </div>
+    {{> logos}}
+  </div>
+</section>
+
+{{> cta}}

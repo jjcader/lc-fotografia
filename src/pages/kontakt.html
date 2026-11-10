@@ -1,0 +1,32 @@
+<!--
+{
+  "title": "Kontakt i rezerwacja sesji | {{brand}}",
+  "description": "Umów portret biznesowy, sesję wizerunkową lub zdjęcia zespołu. Telefon, e-mail, adres studia {{city_in}} i formularz rezerwacji.",
+  "nav": "kontakt",
+  "book_href": "#formularz",
+  "mobile_bar": false
+}
+-->
+<section class="page-head">
+  <div class="wrap page-head__inner">
+    <p class="eyebrow">Kontakt</p>
+    <h1 class="h1">Kontakt i rezerwacja</h1>
+    <p class="lead">Napisz, zadzwoń albo wypełnij formularz. Odpowiadam w ciągu {{reply_time}} z propozycją terminu i ceną.</p>
+  </div>
+</section>
+
+<section class="section section--flush">
+  <div class="wrap contact contact--page">
+    <div class="contact__info">
+      <dl class="contact__list">
+        <div><dt>Telefon</dt><dd><a href="tel:{{phone_href}}">{{phone}}</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+        <div><dt>Studio</dt><dd>{{address_street}}<br>{{address_city}}<br><a class="small" href="{{maps_url}}" rel="noopener" target="_blank">Pokaż na mapie</a></dd></div>
+        <div><dt>Sesje</dt><dd>{{hours}}</dd></div>
+        <div><dt>Dane firmy</dt><dd class="small">{{company_name}}<br>NIP {{nip}}<br>REGON {{regon}}</dd></div>
+        <div><dt>Media społecznościowe</dt><dd><a href="{{instagram_url}}" rel="noopener" target="_blank">Instagram</a> · <a href="{{linkedin_url}}" rel="noopener" target="_blank">LinkedIn</a></dd></div>
+      </dl>
+    </div>
+    {{> form_full}}
+  </div>
+</section>

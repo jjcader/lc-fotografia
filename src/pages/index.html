@@ -1,0 +1,237 @@
+<!--
+{
+  "title": "Fotograf biznesowy {{city}} · portrety biznesowe i wizerunkowe | {{brand}}",
+  "description": "Portrety biznesowe, sesje wizerunkowe i zdjęcia zespołów w studiu lub w Twoim biurze. {{city}} i okolice. Sprawdź portfolio i umów sesję.",
+  "book_href": "#kontakt",
+  "lightbox": true
+}
+-->
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <p class="eyebrow">Fotograf biznesowy · {{city}}</p>
+      <h1 class="h1 hero__title">Portrety biznesowe i wizerunkowe dla firm i ich ludzi</h1>
+      <p class="lead hero__lead">Fotografuję w studiu lub w Waszym biurze. Od pojedynczego portretu na LinkedIn po spójne zdjęcia całego zespołu.</p>
+      <div class="hero__actions">
+        <a class="btn" href="#kontakt">Zarezerwuj sesję</a>
+        <a class="btn btn--ghost" href="portfolio.html">Zobacz portfolio</a>
+      </div>
+      <ul class="stats" aria-label="W liczbach">
+        <li><strong>[X] lat</strong><span>doświadczenia</span></li>
+        <li><strong>[X]+</strong><span>firm-klientów</span></li>
+        <li><strong>[ocena]/5</strong><span>opinie w Google</span></li>
+      </ul>
+    </div>
+    <div class="hero__media">
+      <img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="[Opis zdjęcia, np. portret biznesowy prezes firmy w studiu]" fetchpriority="high">
+      <img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="[Opis drugiego zdjęcia]" loading="lazy">
+      <img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="[Opis trzeciego zdjęcia]" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="logos" aria-labelledby="logos-label">
+  <div class="wrap logos__inner">
+    <p class="logos__label" id="logos-label">Zaufali mi</p>
+    {{> logos}}
+  </div>
+</section>
+
+<section class="section" id="oferta">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="h2">Czego potrzebujesz?</h2>
+      <p class="section-head__aside">Trzy najczęstsze rodzaje sesji. Jeśli Twoja jest inna, napisz, a dopasuję ją do Ciebie.</p>
+    </div>
+    <ul class="services">
+      <li>
+        <a class="service" href="oferta.html#portret-biznesowy">
+          <span class="service__media"><img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="" loading="lazy"></span>
+          <span class="service__body">
+            <span class="service__kicker">Dla osób prywatnych</span>
+            <h3 class="service__title">Portret dla siebie</h3>
+            <span class="service__text">LinkedIn, strona firmowa, prasa. Sesja w studiu, około 45 minut.</span>
+          </span>
+          <span class="service__price">od [cena] zł {{> arrow}}</span>
+        </a>
+      </li>
+      <li>
+        <a class="service" href="oferta.html#zdjecia-zespolu">
+          <span class="service__media"><img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="" loading="lazy"></span>
+          <span class="service__body">
+            <span class="service__kicker">Dla firm</span>
+            <h3 class="service__title">Zdjęcia zespołu</h3>
+            <span class="service__text">Mobilne studio w Waszym biurze. To samo tło i światło dla każdej osoby.</span>
+          </span>
+          <span class="service__price">Wycena indywidualna {{> arrow}}</span>
+        </a>
+      </li>
+      <li>
+        <a class="service" href="oferta.html#kadra-zarzadzajaca">
+          <span class="service__media"><img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="" loading="lazy"></span>
+          <span class="service__body">
+            <span class="service__kicker">Dla firm</span>
+            <h3 class="service__title">Kadra zarządzająca</h3>
+            <span class="service__text">Portrety zarządu do raportów rocznych, mediów i na stronę.</span>
+          </span>
+          <span class="service__price">Wycena indywidualna {{> arrow}}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--flush" id="portfolio">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="h2">Wybrane zdjęcia</h2>
+      <nav class="cat-links" aria-label="Kategorie portfolio">
+        <a href="portfolio.html#biznesowe">Biznesowe</a>
+        <a href="portfolio.html#wizerunkowe">Wizerunkowe</a>
+        <a href="portfolio.html#zespoly">Zespoły</a>
+        <a href="portfolio.html#zarzad">Zarząd</a>
+        <a href="portfolio.html#w-pracy">W miejscu pracy</a>
+      </nav>
+    </div>
+    <div class="gallery" data-gallery>
+      <a class="g-item" href="img/placeholders/portret-4x5.svg" style="--r:.8" data-caption="Portret biznesowy · studio"><img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="[Opis zdjęcia]" loading="lazy" decoding="async"></a>
+      <a class="g-item" href="img/placeholders/portret-3x2.svg" style="--r:1.5" data-caption="Portret środowiskowy w biurze"><img src="img/placeholders/portret-3x2.svg" width="600" height="400" alt="[Opis zdjęcia]" loading="lazy" decoding="async"></a>
+      <a class="g-item" href="img/placeholders/portret-4x5.svg" style="--r:.8" data-caption="Sesja wizerunkowa"><img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="[Opis zdjęcia]" loading="lazy" decoding="async"></a>
+      <a class="g-item" href="img/placeholders/portret-4x5.svg" style="--r:.8" data-caption="Portret członka zarządu"><img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="[Opis zdjęcia]" loading="lazy" decoding="async"></a>
+      <a class="g-item" href="img/placeholders/portret-4x5.svg" style="--r:.8" data-caption="Portret biznesowy · ciemne tło"><img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="[Opis zdjęcia]" loading="lazy" decoding="async"></a>
+      <a class="g-item" href="img/placeholders/portret-4x5.svg" style="--r:.8" data-caption="Sesja wizerunkowa · plener"><img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="[Opis zdjęcia]" loading="lazy" decoding="async"></a>
+      <a class="g-item" href="img/placeholders/zespol-3x2.svg" style="--r:1.5" data-caption="Zdjęcie zespołu w biurze klienta"><img src="img/placeholders/zespol-3x2.svg" width="600" height="400" alt="[Opis zdjęcia]" loading="lazy" decoding="async"></a>
+      <a class="g-item" href="img/placeholders/portret-4x5.svg" style="--r:.8" data-caption="Portret biznesowy · studio"><img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="[Opis zdjęcia]" loading="lazy" decoding="async"></a>
+    </div>
+    <div class="section-foot">
+      <a class="link-arrow" href="portfolio.html">Zobacz całe portfolio {{> arrow}}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="h2">Jak wygląda sesja</h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step__num" aria-hidden="true">01</span>
+        <h3 class="step__title">Krótka rozmowa</h3>
+        <p>Ustalamy, do czego potrzebne są zdjęcia, gdzie i kiedy robimy sesję.</p>
+      </li>
+      <li class="step">
+        <span class="step__num" aria-hidden="true">02</span>
+        <h3 class="step__title">Sesja</h3>
+        <p>W studiu lub u Was w biurze. Podpowiadam pozy i pomagam dobrać strój.</p>
+      </li>
+      <li class="step">
+        <span class="step__num" aria-hidden="true">03</span>
+        <h3 class="step__title">Wybór zdjęć</h3>
+        <p>Dostajesz prywatną galerię online i zaznaczasz ulubione ujęcia.</p>
+      </li>
+      <li class="step">
+        <span class="step__num" aria-hidden="true">04</span>
+        <h3 class="step__title">Gotowe pliki</h3>
+        <p>Retusz wybranych zdjęć i pliki do pobrania w ciągu [X] dni roboczych.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="opinie">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="h2" id="opinie">Co mówią klienci</h2>
+      <a class="link-arrow" href="{{google_reviews_url}}" rel="noopener" target="_blank">Wszystkie opinie w Google {{> arrow}}</a>
+    </div>
+    <ul class="quotes" tabindex="0" aria-label="Opinie klientów">
+      <li>
+        <figure class="quote">
+          <svg class="quote__mark" width="32" height="24" viewBox="0 0 32 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13C0 5.8 4 1.3 11 0l1.4 3C8.5 4.3 6.6 7 6.4 10.5H12V24zm18 0V13c0-7.2 4-11.7 11-13l1.4 3c-3.9 1.3-5.8 4-6 7.5H30V24z"/></svg>
+          <blockquote>[Opinia klienta: 2–3 zdania o przebiegu sesji i o tym, gdzie zdjęcia zostały wykorzystane.]</blockquote>
+          <figcaption>[Imię Nazwisko] · [stanowisko], [firma]</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="quote">
+          <svg class="quote__mark" width="32" height="24" viewBox="0 0 32 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13C0 5.8 4 1.3 11 0l1.4 3C8.5 4.3 6.6 7 6.4 10.5H12V24zm18 0V13c0-7.2 4-11.7 11-13l1.4 3c-3.9 1.3-5.8 4-6 7.5H30V24z"/></svg>
+          <blockquote>[Opinia klienta firmowego, np. o sesji całego zespołu w jeden dzień i spójnym efekcie na stronie.]</blockquote>
+          <figcaption>[Imię Nazwisko] · [stanowisko], [firma]</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure class="quote">
+          <svg class="quote__mark" width="32" height="24" viewBox="0 0 32 24" fill="currentColor" aria-hidden="true"><path d="M0 24V13C0 5.8 4 1.3 11 0l1.4 3C8.5 4.3 6.6 7 6.4 10.5H12V24zm18 0V13c0-7.2 4-11.7 11-13l1.4 3c-3.9 1.3-5.8 4-6 7.5H30V24z"/></svg>
+          <blockquote>[Opinia osoby po sesji wizerunkowej, np. o tym, że czuła się swobodnie przed obiektywem.]</blockquote>
+          <figcaption>[Imię Nazwisko] · [zawód]</figcaption>
+        </figure>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--line" id="o-mnie">
+  <div class="wrap about">
+    <div class="about__media">
+      <img src="img/placeholders/portret-4x5.svg" width="400" height="500" alt="[Imię Nazwisko] w studiu" loading="lazy">
+    </div>
+    <div class="about__head">
+      <p class="eyebrow">O mnie</p>
+      <h2 class="h2">{{photographer}}</h2>
+    </div>
+    <div class="about__body">
+      <p>[2–3 zdania: od ilu lat fotografuje, dla jakich firm i branż, na czym polega jego podejście do portretu. Konkretnie i po ludzku.]</p>
+      <p>[Jedno zdanie o studiu: gdzie jest, jak wygląda, czy można przyjechać z całym zespołem.]</p>
+      <a class="link-arrow" href="o-mnie.html">Więcej o mnie {{> arrow}}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--line">
+  <div class="wrap faq">
+    <div class="faq__intro">
+      <h2 class="h2">Częste pytania</h2>
+      <p>Nie ma tu Twojego pytania? Zadzwoń: <a href="tel:{{phone_href}}">{{phone}}</a></p>
+      <a class="link-arrow" href="oferta.html#pytania">Więcej pytań i odpowiedzi {{> arrow}}</a>
+    </div>
+    <div class="faq__list">
+      <details open>
+        <summary>Ile trwa sesja i ile zdjęć dostanę? <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p class="faq__answer">Portret biznesowy trwa około 45 minut, sesja wizerunkowa około 2 godzin. Po sesji dostajesz galerię online, z której wybierasz [X] zdjęć do retuszu. Kolejne możesz dokupić.</p>
+      </details>
+      <details>
+        <summary>Co założyć na sesję? <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p class="faq__answer">Najlepiej sprawdzają się gładkie tkaniny w stonowanych kolorach, bez drobnych wzorów i dużych logo. Zabierz 2–3 zestawy, wspólnie wybierzemy najlepszy. Więcej wskazówek znajdziesz w zakładce <a href="oferta.html#przygotowanie">Oferta</a>.</p>
+      </details>
+      <details>
+        <summary>Czy możesz przyjechać do naszego biura? <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p class="faq__answer">Tak. Przywożę mobilne studio: tło, oświetlenie i laptop do podglądu zdjęć. Potrzebuję około [X] m² wolnej przestrzeni i dostępu do gniazdka.</p>
+      </details>
+      <details>
+        <summary>Kiedy otrzymam gotowe zdjęcia? <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p class="faq__answer">Galerię do wyboru udostępniam w ciągu [X] dni roboczych, a wybrane zdjęcia po retuszu w ciągu kolejnych [X] dni. Pilne terminy, np. dla prasy, ustalamy indywidualnie.</p>
+      </details>
+      <details>
+        <summary>Czy zdjęcia są retuszowane? <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p class="faq__answer">Tak. Każde wybrane zdjęcie przechodzi naturalny retusz: wyrównuję cerę, światło i kolory. Na zdjęciu masz wyglądać jak Ty, tylko w dobry dzień.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="kontakt">
+  <div class="wrap contact">
+    <div class="contact__info">
+      <h2 class="h2">Umów sesję</h2>
+      <p class="lead">Napisz kilka słów o tym, czego potrzebujesz. Odpowiadam w ciągu {{reply_time}} z propozycją terminu i ceną.</p>
+      <dl class="contact__list">
+        <div><dt>Telefon</dt><dd><a href="tel:{{phone_href}}">{{phone}}</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+        <div><dt>Studio</dt><dd>{{address_street}}, {{address_city}}</dd></div>
+        <div><dt>Sesje</dt><dd>{{hours}}</dd></div>
+      </dl>
+    </div>
+    {{> form_short}}
+  </div>
+</section>

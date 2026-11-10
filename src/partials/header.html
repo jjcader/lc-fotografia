@@ -1,0 +1,39 @@
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html" aria-label="{{brand}}, strona główna">
+      <span class="brand__mark">LC</span>
+      <span class="brand__rule" aria-hidden="true"></span>
+      <span class="brand__word">FOTOGRAFIA</span>
+    </a>
+    <nav class="site-nav" aria-label="Menu główne">
+      <ul class="site-nav__list">
+        <li><a href="portfolio.html"{{nav_portfolio}}>Portfolio</a></li>
+        <li><a href="oferta.html"{{nav_oferta}}>Oferta</a></li>
+        <li><a href="o-mnie.html"{{nav_omnie}}>O mnie</a></li>
+        <li><a href="kontakt.html"{{nav_kontakt}}>Kontakt</a></li>
+      </ul>
+      <a class="btn btn--sm" href="{{book_href}}">Zarezerwuj sesję</a>
+    </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-mobilne" aria-label="Otwórz menu" data-nav-toggle>
+      <svg class="nav-toggle__open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+      <svg class="nav-toggle__close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="menu-mobilne" hidden data-mobile-menu>
+    <div class="wrap mobile-menu__inner">
+      <ul class="mobile-menu__list">
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="portfolio.html"{{nav_portfolio}}>Portfolio</a></li>
+        <li><a href="oferta.html"{{nav_oferta}}>Oferta</a></li>
+        <li><a href="o-mnie.html"{{nav_omnie}}>O mnie</a></li>
+        <li><a href="kontakt.html"{{nav_kontakt}}>Kontakt</a></li>
+      </ul>
+      <div class="mobile-menu__contact">
+        <a href="tel:{{phone_href}}">{{phone}}</a>
+        <a href="mailto:{{email}}">{{email}}</a>
+        <a href="strefa-klienta.html">Strefa klienta</a>
+      </div>
+      <a class="btn btn--block" href="{{book_href}}">Zarezerwuj sesję</a>
+    </div>
+  </div>
+</header>
