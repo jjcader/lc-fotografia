@@ -25,14 +25,15 @@
       <select id="f-rodzaj" name="rodzaj_sesji">
         <option>Portret biznesowy</option>
         <option>Sesja wizerunkowa</option>
+        <option>Sesja portretowa</option>
         <option>Zdjęcia zespołu</option>
         <option>Kadra zarządzająca</option>
         <option>Zdjęcia w miejscu pracy</option>
-        <option>Inne / jeszcze nie wiem</option>
+        <option>Inne</option>
       </select>
     </div>
     <div class="field">
-      <label for="f-osoby">Ile osób do sfotografowania?</label>
+      <label for="f-osoby">Liczba osób</label>
       <select id="f-osoby" name="liczba_osob">
         <option>1</option>
         <option>2–5</option>
@@ -42,21 +43,29 @@
       </select>
     </div>
   </div>
+  <fieldset class="field fieldset" data-termin>
+    <legend>Termin</legend>
+    <div class="termin">
+      <div class="choices">
+        <label class="choice" for="f-t-konkretny"><input id="f-t-konkretny" type="radio" name="termin_rodzaj" value="konkretny" checked> Konkretny</label>
+        <label class="choice" for="f-t-elastyczny"><input id="f-t-elastyczny" type="radio" name="termin_rodzaj" value="elastyczny"> Elastyczny</label>
+      </div>
+      <input name="termin" type="date" aria-label="Data sesji" data-min-today data-termin-field="konkretny">
+      <input name="termin" type="text" aria-label="Elastyczny termin, opisz go" placeholder="np. druga połowa stycznia, rano" data-termin-field="elastyczny" hidden disabled>
+    </div>
+  </fieldset>
   <fieldset class="field fieldset">
-    <legend>Miejsce sesji</legend>
+    <legend>Miejsce</legend>
     <div class="choices">
-      <label class="choice" for="f-m-studio"><input id="f-m-studio" type="radio" name="miejsce" value="studio" checked> W studiu</label>
-      <label class="choice" for="f-m-biuro"><input id="f-m-biuro" type="radio" name="miejsce" value="biuro"> W naszym biurze</label>
+      <label class="choice" for="f-m-studio"><input id="f-m-studio" type="radio" name="miejsce" value="studio" checked> Studio</label>
+      <label class="choice" for="f-m-biuro"><input id="f-m-biuro" type="radio" name="miejsce" value="biuro"> Biuro</label>
+      <label class="choice" for="f-m-plener"><input id="f-m-plener" type="radio" name="miejsce" value="plener"> Plener</label>
       <label class="choice" for="f-m-inne"><input id="f-m-inne" type="radio" name="miejsce" value="do ustalenia"> Do ustalenia</label>
     </div>
   </fieldset>
   <div class="field">
-    <label for="f-termin">Preferowany termin</label>
-    <input id="f-termin" name="termin" type="text" placeholder="np. druga połowa stycznia, rano">
-  </div>
-  <div class="field">
     <label for="f-wiad">Wiadomość</label>
-    <textarea id="f-wiad" name="wiadomosc" rows="5" placeholder="Do czego potrzebne są zdjęcia? Strona www, LinkedIn, raport roczny, prasa…"></textarea>
+    <textarea id="f-wiad" name="wiadomosc" rows="5" placeholder="Do czego potrzebne są zdjęcia?"></textarea>
   </div>
   <div class="hp" aria-hidden="true">
     <label for="f-www">Zostaw to pole puste</label>
@@ -67,8 +76,8 @@
     <label for="f-zgoda">Akceptuję <a href="polityka-prywatnosci.html">politykę prywatności</a>. Dane z formularza posłużą wyłącznie do odpowiedzi na zapytanie. <span class="req" aria-hidden="true">*</span></label>
   </div>
   <div class="form__foot">
-    <button class="btn" type="submit">Wyślij zapytanie</button>
-    <p class="form__note">Pola oznaczone * są wymagane.</p>
+    <button class="btn" type="submit">Wyślij</button>
+    <p class="form__note">* wymagane</p>
   </div>
   <p class="form__status" role="status" aria-live="polite" data-form-status></p>
 </form>

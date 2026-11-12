@@ -5,7 +5,7 @@
   3. Proporcje zdjęć w galerii
   4. Filtr kategorii w portfolio (adres: portfolio.html#zespoly)
   5. Podgląd zdjęć na pełnym ekranie (strzałki, klawiatura, przesunięcie palcem)
-  6. Formularze kontaktowe
+  6. Formularze kontaktowe (+ kalendarz w polu „Termin”)
 */
 (function () {
   "use strict";
@@ -145,8 +145,21 @@
       if (e.key === "ArrowLeft") { e.preventDefault(); showAt(current - 1); }
       if (e.key === "ArrowRight") { e.preventDefault(); showAt(current + 1); }
     });
+    // Zdjęcie wypełnia cały ekran (object-fit: contain), więc klik w czarne pole obok obrazu też zamyka podgląd.
+    var outsidePicture = function (e) {
+      var nw = lbImg.naturalWidth;
+      var nh = lbImg.naturalHeight;
+      if (!nw || !nh) return false;
+      var box = lbImg.getBoundingClientRect();
+      var scale = Math.min(box.width / nw, box.height / nh);
+      var w = nw * scale;
+      var h = nh * scale;
+      var x = box.left + (box.width - w) / 2;
+      var y = box.top + (box.height - h) / 2;
+      return e.clientX < x || e.clientX > x + w || e.clientY < y || e.clientY > y + h;
+    };
     dialog.addEventListener("click", function (e) {
-      if (e.target === dialog || e.target === lbStage) dialog.close();
+      if (e.target === dialog || e.target === lbStage || (e.target === lbImg && outsidePicture(e))) dialog.close();
     });
     dialog.addEventListener("close", function () {
       lbImg.removeAttribute("src");
@@ -172,6 +185,33 @@
   /* 6. Formularze ----------------------------------------------------------
      Wysyłka idzie na adres z site.json → "form_endpoint" (np. Formspree).
      Bez adresu formularz pokazuje komunikat z prośbą o telefon lub e-mail. */
+  // Pole „Termin”: Konkretny (kalendarz) albo Elastyczny (opis słowami). Widać i wysyła się tylko jedno pole.
+  $$("[data-termin]").forEach(function (box) {
+    var radios = $$('input[type="radio"]', box);
+    var fields = $$("[data-termin-field]", box);
+    var apply = function (focus) {
+      var mode = radios.length ? radios[0].value : "";
+      radios.forEach(function (r) { if (r.checked) mode = r.value; });
+      fields.forEach(function (f) {
+        var on = f.getAttribute("data-termin-field") === mode;
+        f.hidden = !on;
+        f.disabled = !on;
+        if (on && focus) f.focus();
+      });
+    };
+    radios.forEach(function (r) { r.addEventListener("change", function () { apply(true); }); });
+    var form = box.closest("form");
+    if (form) form.addEventListener("reset", function () { setTimeout(function () { apply(false); }, 0); });
+    apply(false);
+  });
+
+  // Kalendarz: nie da się wybrać dnia z przeszłości.
+  $$('input[type="date"][data-min-today]').forEach(function (input) {
+    var d = new Date();
+    var pad = function (n) { return (n < 10 ? "0" : "") + n; };
+    input.min = d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+  });
+
   $$("[data-form]").forEach(function (form) {
     var status = $("[data-form-status]", form);
     var submit = $('button[type="submit"]', form);

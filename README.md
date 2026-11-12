@@ -38,7 +38,7 @@ Szare sylwetki to zastępcze pliki SVG w `public/img/placeholders/`.
   Miniatury w galerii mogą mieć 1200 px.
 - Publikuj tylko zdjęcia osób, które wyraziły na to zgodę (art. 81 prawa autorskiego).
 
-Kategorie portfolio to atrybut `data-cat` (`biznesowe`, `wizerunkowe`, `zespoly`, `zarzad`, `w-pracy`).
+Kategorie portfolio to atrybut `data-cat` (`biznesowe`, `wizerunkowe`, `prywatne`, `zespoly`, `zarzad`, `w-pracy`).
 Jedno zdjęcie może mieć kilka kategorii: `data-cat="zespoly w-pracy"`.
 Adres kategorii: `portfolio.html#zespoly`.
 
@@ -52,12 +52,14 @@ Najprościej: Formspree (darmowy plan na start).
 3. Wyślij próbną wiadomość.
 
 Bez tego adresu formularz pokazuje prośbę o telefon lub e-mail.
+Formularz rezerwacji jest na osobnej stronie `rezerwacja.html`; `kontakt.html` ma dane kontaktowe i mapę.
 Formspree jest firmą z USA. Dopisz ją w polityce prywatności albo wybierz usługę z UE.
 Na Netlify można zamiast tego użyć wbudowanych Netlify Forms.
 
 ## Przed startem strony
 
 - [ ] Uzupełnij `site.json` (w tym `domain`, potrzebne do mapy strony i Google).
+- [ ] Mapa na stronie Kontakt: teraz pokazuje zastępczy adres (Rynek, Wrocław). W Mapach Google: Udostępnij → Umieść mapę, skopiuj adres z `src="…"` do `maps_embed_url` w `site.json`.
 - [ ] Podmień zdjęcia, logotypy klientów i opinie.
 - [ ] Przeczytaj teksty: oferta, FAQ i „Jak pracuję” to propozycje do poprawienia.
 - [ ] Ustaw adres formularza (wyżej).
@@ -73,8 +75,10 @@ Na Netlify można zamiast tego użyć wbudowanych Netlify Forms.
 `site.json` → `"allow_indexing": false` ukrywa stronę przed Google na czas testów. Na starcie zmień na `true`.
 
 - Najszybciej: zbuduj stronę i przeciągnij folder `dist` na app.netlify.com/drop. Załóż darmowe konto, żeby strona nie zniknęła.
-- Na stałe: repozytorium na GitHubie + GitHub Pages. Plik `.github/workflows/deploy.yml` sam buduje i publikuje stronę po każdym pushu
-  (raz ustaw: Settings → Pages → Source: GitHub Actions). Darmowe konto wymaga publicznego repozytorium.
+- Na stałe: GitHub Pages z gałęzi `gh-pages` (https://jjcader.github.io/lc-fotografia/).
+  Po zmianach: `git push`, a potem `sh publish.sh`, który buduje stronę i wrzuca `dist/` na gałąź `gh-pages`.
+  Ustawienie: Settings → Pages → Deploy from a branch → `gh-pages`, `/ (root)`. Darmowe konto wymaga publicznego repozytorium.
+- Plik `.github/workflows/deploy.yml` (publikacja przez GitHub Actions) jest teraz uruchamiany tylko ręcznie, bo konto ma blokadę Actions.
 - Prywatne repozytorium: podłącz je do Netlify, ustawienia są w `netlify.toml`.
 
 ## Układ na telefonie

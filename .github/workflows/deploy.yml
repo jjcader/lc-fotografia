@@ -1,11 +1,10 @@
-# Buduje stronę (python3 build.py) i publikuje folder dist/ na GitHub Pages
-# przy każdym pushu na gałąź main.
-# Jednorazowo: GitHub → Settings → Pages → Build and deployment → Source: "GitHub Actions".
+# Buduje stronę (python3 build.py) i publikuje folder dist/ na GitHub Pages.
+# NIEUŻYWANY: konto GitHub ma blokadę Actions, więc strona idzie z gałęzi gh-pages (publish.sh).
+# Żeby wrócić do tej metody: dopisz z powrotem "push: branches: [main]" poniżej
+# i ustaw Settings → Pages → Build and deployment → Source: "GitHub Actions".
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

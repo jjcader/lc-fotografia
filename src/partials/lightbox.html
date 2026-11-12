@@ -1,13 +1,13 @@
 <dialog class="lightbox" aria-label="Podgląd zdjęcia" data-lightbox-dialog>
-  <div class="lightbox__bar">
-    <span class="lightbox__count" data-lb-count>1 / 1</span>
-    <button class="lightbox__btn" type="button" aria-label="Zamknij podgląd" data-lb-close>
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
-    </button>
-  </div>
+  <button class="lightbox__btn lightbox__close" type="button" aria-label="Zamknij podgląd" data-lb-close>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
   <figure class="lightbox__figure" data-lb-stage>
     <img data-lb-img alt="">
-    <figcaption data-lb-caption></figcaption>
+    <figcaption class="lightbox__foot">
+      <span class="lightbox__count" data-lb-count>1 / 1</span>
+      <span class="lightbox__caption" data-lb-caption></span>
+    </figcaption>
   </figure>
   <button class="lightbox__btn lightbox__prev" type="button" aria-label="Poprzednie zdjęcie" data-lb-prev>
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>

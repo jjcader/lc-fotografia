@@ -1,0 +1,29 @@
+<!--
+{
+  "title": "Rezerwacja sesji · portret biznesowy, sesja portretowa, zdjęcia zespołu | {{brand}}",
+  "description": "Zarezerwuj sesję: wybierz rodzaj, termin i miejsce. Odpowiadam w ciągu {{reply_time}} z potwierdzeniem terminu i ceną.",
+  "nav": "rezerwacja",
+  "book_href": "#formularz",
+  "mobile_bar": false
+}
+-->
+<section class="page-head">
+  <div class="wrap page-head__inner">
+    <h1 class="h1">Rezerwacja</h1>
+    <p class="lead">Wybierz sesję i termin. Potwierdzę go w ciągu {{reply_time}}.</p>
+  </div>
+</section>
+
+<section class="section section--flush">
+  <div class="wrap contact contact--page contact--booking">
+    {{> form_full}}
+    <div class="contact__info">
+      <dl class="contact__list">
+        <div><dt>Telefon</dt><dd><a href="tel:{{phone_href}}">{{phone}}</a></dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
+        <div><dt>Studio</dt><dd>{{address_street}}<br>{{address_city}}<br><a class="small" href="kontakt.html#mapa">Mapa</a></dd></div>
+        <div><dt>Sesje</dt><dd>{{hours}}</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>

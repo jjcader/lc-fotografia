@@ -19,23 +19,29 @@
       <input id="f-tel" name="telefon" type="tel" autocomplete="tel">
     </div>
   </div>
-  <div class="form__row">
-    <div class="field">
-      <label for="f-rodzaj">Rodzaj sesji</label>
-      <select id="f-rodzaj" name="rodzaj_sesji">
-        <option>Portret biznesowy</option>
-        <option>Sesja wizerunkowa</option>
-        <option>Zdjęcia zespołu</option>
-        <option>Kadra zarządzająca</option>
-        <option>Zdjęcia w miejscu pracy</option>
-        <option>Inne / jeszcze nie wiem</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="f-termin">Preferowany termin</label>
-      <input id="f-termin" name="termin" type="text" placeholder="np. druga połowa stycznia">
-    </div>
+  <div class="field">
+    <label for="f-rodzaj">Rodzaj sesji</label>
+    <select id="f-rodzaj" name="rodzaj_sesji">
+      <option>Portret biznesowy</option>
+      <option>Sesja wizerunkowa</option>
+      <option>Sesja portretowa</option>
+      <option>Zdjęcia zespołu</option>
+      <option>Kadra zarządzająca</option>
+      <option>Zdjęcia w miejscu pracy</option>
+      <option>Inne</option>
+    </select>
   </div>
+  <fieldset class="field fieldset" data-termin>
+    <legend>Termin</legend>
+    <div class="termin">
+      <div class="choices">
+        <label class="choice" for="f-t-konkretny"><input id="f-t-konkretny" type="radio" name="termin_rodzaj" value="konkretny" checked> Konkretny</label>
+        <label class="choice" for="f-t-elastyczny"><input id="f-t-elastyczny" type="radio" name="termin_rodzaj" value="elastyczny"> Elastyczny</label>
+      </div>
+      <input name="termin" type="date" aria-label="Data sesji" data-min-today data-termin-field="konkretny">
+      <input name="termin" type="text" aria-label="Elastyczny termin, opisz go" placeholder="np. druga połowa stycznia, rano" data-termin-field="elastyczny" hidden disabled>
+    </div>
+  </fieldset>
   <div class="field">
     <label for="f-wiad">Wiadomość</label>
     <textarea id="f-wiad" name="wiadomosc" rows="4" placeholder="Do czego potrzebne są zdjęcia? Ile osób?"></textarea>
@@ -49,7 +55,7 @@
     <label for="f-zgoda">Akceptuję <a href="polityka-prywatnosci.html">politykę prywatności</a>. Dane z formularza posłużą wyłącznie do odpowiedzi na zapytanie. <span class="req" aria-hidden="true">*</span></label>
   </div>
   <div class="form__foot">
-    <button class="btn" type="submit">Wyślij zapytanie</button>
+    <button class="btn" type="submit">Wyślij</button>
     <p class="form__note">Odpowiadam w ciągu {{reply_time}}.</p>
   </div>
   <p class="form__status" role="status" aria-live="polite" data-form-status></p>

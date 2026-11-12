@@ -1,17 +1,14 @@
 <!--
 {
-  "title": "Kontakt i rezerwacja sesji | {{brand}}",
-  "description": "Umów portret biznesowy, sesję wizerunkową lub zdjęcia zespołu. Telefon, e-mail, adres studia {{city_in}} i formularz rezerwacji.",
-  "nav": "kontakt",
-  "book_href": "#formularz",
-  "mobile_bar": false
+  "title": "Kontakt · telefon, e-mail, adres studia | {{brand}}",
+  "description": "Telefon, e-mail i adres studia {{city_in}} z mapą dojazdu. Dane firmy i media społecznościowe.",
+  "nav": "kontakt"
 }
 -->
 <section class="page-head">
   <div class="wrap page-head__inner">
-    <p class="eyebrow">Kontakt</p>
-    <h1 class="h1">Kontakt i rezerwacja</h1>
-    <p class="lead">Napisz, zadzwoń albo wypełnij formularz. Odpowiadam w ciągu {{reply_time}} z propozycją terminu i ceną.</p>
+    <h1 class="h1">Kontakt</h1>
+    <p class="lead">Odpowiadam w ciągu {{reply_time}}.</p>
   </div>
 </section>
 
@@ -21,12 +18,15 @@
       <dl class="contact__list">
         <div><dt>Telefon</dt><dd><a href="tel:{{phone_href}}">{{phone}}</a></dd></div>
         <div><dt>E-mail</dt><dd><a href="mailto:{{email}}">{{email}}</a></dd></div>
-        <div><dt>Studio</dt><dd>{{address_street}}<br>{{address_city}}<br><a class="small" href="{{maps_url}}" rel="noopener" target="_blank">Pokaż na mapie</a></dd></div>
+        <div><dt>Studio</dt><dd>{{address_street}}<br>{{address_city}}<br><a class="small" href="{{maps_url}}" rel="noopener" target="_blank">Mapy Google</a></dd></div>
         <div><dt>Sesje</dt><dd>{{hours}}</dd></div>
         <div><dt>Dane firmy</dt><dd class="small">{{company_name}}<br>NIP {{nip}}<br>REGON {{regon}}</dd></div>
-        <div><dt>Media społecznościowe</dt><dd><a href="{{instagram_url}}" rel="noopener" target="_blank">Instagram</a> · <a href="{{linkedin_url}}" rel="noopener" target="_blank">LinkedIn</a></dd></div>
+        <div><dt>Social media</dt><dd><a href="{{instagram_url}}" rel="noopener" target="_blank">Instagram</a> · <a href="{{linkedin_url}}" rel="noopener" target="_blank">LinkedIn</a></dd></div>
       </dl>
+      <a class="btn" href="rezerwacja.html">Zarezerwuj sesję</a>
     </div>
-    {{> form_full}}
+    <div class="map" id="mapa">
+      <iframe src="{{maps_embed_url}}" title="Mapa dojazdu do studia: {{address_street}}, {{address_city}}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
   </div>
 </section>

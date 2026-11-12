@@ -23,7 +23,7 @@ SRC = ROOT / "src"
 PUBLIC = ROOT / "public"
 DIST = ROOT / "dist"
 
-NAV_KEYS = ["portfolio", "oferta", "omnie", "kontakt"]
+NAV_KEYS = ["portfolio", "oferta", "omnie", "kontakt", "rezerwacja"]
 META_RE = re.compile(r"^\s*<!--(.*?)-->", re.S)
 INCLUDE_RE = re.compile(r"\{\{>\s*([\w-]+)\s*\}\}")
 VAR_RE = re.compile(r"\{\{\s*([\w]+)\s*\}\}")
@@ -62,7 +62,7 @@ def schema_json(site: dict) -> str:
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": site["brand"],
-        "description": f"Fotograf biznesowy: portrety biznesowe, sesje wizerunkowe, zdjęcia zespołów. {site['city']}.",
+        "description": f"Fotograf portretowy: portrety biznesowe i prywatne, sesje wizerunkowe, zdjęcia zespołów. {site['city']}.",
         "url": site["domain"] + "/",
         "telephone": site["phone"],
         "email": site["email"],
@@ -105,7 +105,7 @@ def build() -> None:
             "title": meta["title"],
             "description": meta["description"],
             "canonical": site["domain"] + ("/" if name == "index" else f"/{name}.html"),
-            "book_href": meta.get("book_href", "kontakt.html#formularz"),
+            "book_href": meta.get("book_href", "rezerwacja.html"),
             "robots": '<meta name="robots" content="noindex">' if (meta.get("noindex") or not indexing) else "",
             "schema": schema_json(site) if name == "index" else "",
         })
