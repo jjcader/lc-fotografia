@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kontakt i rezerwacja sesji | LC Fotografia</title>
-<meta name="description" content="Umów portret biznesowy, sesję wizerunkową lub zdjęcia zespołu. Telefon, e-mail, adres studia [w Mieście] i formularz rezerwacji.">
+<title>Kontakt · telefon, e-mail, adres studia | LC Fotografia</title>
+<meta name="description" content="Telefon, e-mail i adres studia [w Mieście] z mapą dojazdu. Dane firmy i media społecznościowe.">
 <link rel="canonical" href="https://[twoja-domena].pl/kontakt.html">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pl_PL">
 <meta property="og:site_name" content="LC Fotografia">
-<meta property="og:title" content="Kontakt i rezerwacja sesji | LC Fotografia">
-<meta property="og:description" content="Umów portret biznesowy, sesję wizerunkową lub zdjęcia zespołu. Telefon, e-mail, adres studia [w Mieście] i formularz rezerwacji.">
+<meta property="og:title" content="Kontakt · telefon, e-mail, adres studia | LC Fotografia">
+<meta property="og:description" content="Telefon, e-mail i adres studia [w Mieście] z mapą dojazdu. Dane firmy i media społecznościowe.">
 <meta property="og:url" content="https://[twoja-domena].pl/kontakt.html">
 <meta name="theme-color" content="#FFFFFF">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -38,7 +38,7 @@
         <li><a href="o-mnie.html">O mnie</a></li>
         <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
       </ul>
-      <a class="btn btn--sm" href="#formularz">Zarezerwuj sesję</a>
+      <a class="btn btn--sm" href="rezerwacja.html">Zarezerwuj sesję</a>
     </nav>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-mobilne" aria-label="Otwórz menu" data-nav-toggle>
       <svg class="nav-toggle__open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
@@ -59,16 +59,15 @@
         <a href="mailto:[adres@e-mail.pl]">[adres@e-mail.pl]</a>
         <a href="strefa-klienta.html">Strefa klienta</a>
       </div>
-      <a class="btn btn--block" href="#formularz">Zarezerwuj sesję</a>
+      <a class="btn btn--block" href="rezerwacja.html">Zarezerwuj sesję</a>
     </div>
   </div>
 </header>
 <main id="tresc">
 <section class="page-head">
   <div class="wrap page-head__inner">
-    <p class="eyebrow">Kontakt</p>
-    <h1 class="h1">Kontakt i rezerwacja</h1>
-    <p class="lead">Napisz, zadzwoń albo wypełnij formularz. Odpowiadam w ciągu 24 godzin z propozycją terminu i ceną.</p>
+    <h1 class="h1">Kontakt</h1>
+    <p class="lead">Odpowiadam w ciągu 24 godzin.</p>
   </div>
 </section>
 
@@ -78,86 +77,16 @@
       <dl class="contact__list">
         <div><dt>Telefon</dt><dd><a href="tel:+48000000000">[+48 000 000 000]</a></dd></div>
         <div><dt>E-mail</dt><dd><a href="mailto:[adres@e-mail.pl]">[adres@e-mail.pl]</a></dd></div>
-        <div><dt>Studio</dt><dd>[ulica i numer]<br>[00-000 Miasto]<br><a class="small" href="https://www.google.com/maps/search/?api=1&query=[adres+studia]" rel="noopener" target="_blank">Pokaż na mapie</a></dd></div>
+        <div><dt>Studio</dt><dd>Rynek [nr]<br>[00-000] Wrocław<br><a class="small" href="https://www.google.com/maps/search/?api=1&query=Rynek%2C+Wroc%C5%82aw" rel="noopener" target="_blank">Mapy Google</a></dd></div>
         <div><dt>Sesje</dt><dd>pn–pt [9:00–18:00], weekendy po ustaleniu</dd></div>
         <div><dt>Dane firmy</dt><dd class="small">[Pełna nazwa firmy]<br>NIP [000-000-00-00]<br>REGON [000000000]</dd></div>
-        <div><dt>Media społecznościowe</dt><dd><a href="https://www.instagram.com/[profil]" rel="noopener" target="_blank">Instagram</a> · <a href="https://www.linkedin.com/in/[profil]" rel="noopener" target="_blank">LinkedIn</a></dd></div>
+        <div><dt>Social media</dt><dd><a href="https://www.instagram.com/[profil]" rel="noopener" target="_blank">Instagram</a> · <a href="https://www.linkedin.com/in/[profil]" rel="noopener" target="_blank">LinkedIn</a></dd></div>
       </dl>
+      <a class="btn" href="rezerwacja.html">Zarezerwuj sesję</a>
     </div>
-    <form class="form" id="formularz" method="post" data-form data-endpoint="" data-reply-time="24 godzin">
-  <div class="form__row">
-    <div class="field">
-      <label for="f-imie">Imię i nazwisko <span class="req" aria-hidden="true">*</span></label>
-      <input id="f-imie" name="imie_nazwisko" type="text" autocomplete="name" required>
+    <div class="map" id="mapa">
+      <iframe src="https://maps.google.com/maps?q=Rynek%2C%20Wroc%C5%82aw&z=16&hl=pl&output=embed" title="Mapa dojazdu do studia: Rynek [nr], [00-000] Wrocław" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
-    <div class="field">
-      <label for="f-firma">Firma <span class="opt">(opcjonalnie)</span></label>
-      <input id="f-firma" name="firma" type="text" autocomplete="organization">
-    </div>
-  </div>
-  <div class="form__row">
-    <div class="field">
-      <label for="f-email">E-mail <span class="req" aria-hidden="true">*</span></label>
-      <input id="f-email" name="email" type="email" autocomplete="email" required>
-    </div>
-    <div class="field">
-      <label for="f-tel">Telefon <span class="opt">(opcjonalnie)</span></label>
-      <input id="f-tel" name="telefon" type="tel" autocomplete="tel">
-    </div>
-  </div>
-  <div class="form__row">
-    <div class="field">
-      <label for="f-rodzaj">Rodzaj sesji</label>
-      <select id="f-rodzaj" name="rodzaj_sesji">
-        <option>Portret biznesowy</option>
-        <option>Sesja wizerunkowa</option>
-        <option>Zdjęcia zespołu</option>
-        <option>Kadra zarządzająca</option>
-        <option>Zdjęcia w miejscu pracy</option>
-        <option>Inne / jeszcze nie wiem</option>
-      </select>
-    </div>
-    <div class="field">
-      <label for="f-osoby">Ile osób do sfotografowania?</label>
-      <select id="f-osoby" name="liczba_osob">
-        <option>1</option>
-        <option>2–5</option>
-        <option>6–20</option>
-        <option>21–50</option>
-        <option>Ponad 50</option>
-      </select>
-    </div>
-  </div>
-  <fieldset class="field fieldset">
-    <legend>Miejsce sesji</legend>
-    <div class="choices">
-      <label class="choice" for="f-m-studio"><input id="f-m-studio" type="radio" name="miejsce" value="studio" checked> W studiu</label>
-      <label class="choice" for="f-m-biuro"><input id="f-m-biuro" type="radio" name="miejsce" value="biuro"> W naszym biurze</label>
-      <label class="choice" for="f-m-inne"><input id="f-m-inne" type="radio" name="miejsce" value="do ustalenia"> Do ustalenia</label>
-    </div>
-  </fieldset>
-  <div class="field">
-    <label for="f-termin">Preferowany termin</label>
-    <input id="f-termin" name="termin" type="text" placeholder="np. druga połowa stycznia, rano">
-  </div>
-  <div class="field">
-    <label for="f-wiad">Wiadomość</label>
-    <textarea id="f-wiad" name="wiadomosc" rows="5" placeholder="Do czego potrzebne są zdjęcia? Strona www, LinkedIn, raport roczny, prasa…"></textarea>
-  </div>
-  <div class="hp" aria-hidden="true">
-    <label for="f-www">Zostaw to pole puste</label>
-    <input id="f-www" name="website" type="text" tabindex="-1" autocomplete="off">
-  </div>
-  <div class="check">
-    <input id="f-zgoda" name="zgoda" type="checkbox" value="tak" required>
-    <label for="f-zgoda">Akceptuję <a href="polityka-prywatnosci.html">politykę prywatności</a>. Dane z formularza posłużą wyłącznie do odpowiedzi na zapytanie. <span class="req" aria-hidden="true">*</span></label>
-  </div>
-  <div class="form__foot">
-    <button class="btn" type="submit">Wyślij zapytanie</button>
-    <p class="form__note">Pola oznaczone * są wymagane.</p>
-  </div>
-  <p class="form__status" role="status" aria-live="polite" data-form-status></p>
-</form>
   </div>
 </section>
 </main>
@@ -169,13 +98,13 @@
         <span class="brand__rule" aria-hidden="true"></span>
         <span class="brand__word">FOTOGRAFIA</span>
       </a>
-      <p class="site-footer__tag">Portrety biznesowe i wizerunkowe, zdjęcia zespołów. [Miasto] i okolice.</p>
+      <p class="site-footer__tag">Portrety biznesowe i prywatne, zdjęcia zespołów. [Miasto] i okolice.</p>
     </div>
     <div class="site-footer__col">
       <h2 class="site-footer__title">Kontakt</h2>
       <a href="tel:+48000000000">[+48 000 000 000]</a>
       <a href="mailto:[adres@e-mail.pl]">[adres@e-mail.pl]</a>
-      <span>[ulica i numer], [00-000 Miasto]</span>
+      <span>Rynek [nr], [00-000] Wrocław</span>
     </div>
     <div class="site-footer__col">
       <h2 class="site-footer__title">Strona</h2>
@@ -183,6 +112,7 @@
       <a href="oferta.html">Oferta</a>
       <a href="o-mnie.html">O mnie</a>
       <a href="kontakt.html">Kontakt</a>
+      <a href="rezerwacja.html">Rezerwacja</a>
     </div>
     <div class="site-footer__col">
       <h2 class="site-footer__title">Dla klientów</h2>
@@ -197,7 +127,12 @@
     <span>NIP [000-000-00-00]</span>
   </div>
 </footer>
-
+<div class="mobile-bar" data-mobile-bar>
+  <a class="btn btn--block" href="rezerwacja.html">Zarezerwuj sesję</a>
+  <a class="btn btn--ghost btn--icon" href="tel:+48000000000" aria-label="Zadzwoń: [+48 000 000 000]">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+  </a>
+</div>
 
 <script src="js/main.js" defer></script>
 </body>
